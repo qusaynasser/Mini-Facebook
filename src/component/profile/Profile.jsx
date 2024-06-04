@@ -25,7 +25,7 @@ export default function Profile() {
         if (userId) {
             postsUser();
         }
-    }, [userId,userData]);
+    }, [userId]);
     
     const deletePost = async (id) => {
         const {data} = await axios.delete(`https://tarmeezacademy.com/api/v1/posts/${id}`,
