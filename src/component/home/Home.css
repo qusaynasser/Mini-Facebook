@@ -1,0 +1,132 @@
+body
+{
+    background-color: #f0ecff !important;
+}
+.show-comment
+{
+    background-color: #f0ecff ;
+    padding: 10px;
+}
+.img-profile
+{
+    width: 45px !important;
+    height: 45px !important;
+}
+.card-body img
+{
+    height: 450px ;
+}
+.time-post
+{
+    color: rgb(193, 193, 193);
+}
+
+.lable-input
+{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.btn-login
+{
+    margin-left: 175px;
+}
+.navbars
+{
+    width: 965px !important;
+}
+
+.img-navbar
+{
+    width: 30px;
+    /* height: 35px; */
+    margin-left: 8px;
+}
+
+.btn-tag
+{
+    background-color: gray;
+    color: white;
+}
+
+.addPost
+{
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    top: 600px;
+    right: 100px ;
+    color: rgb(0, 123, 255);
+}
+.border-addPost
+{
+    border-bottom: 2px solid black;
+    
+}
+.make-input-center
+{
+    width: 940px;
+    margin-left: 175px;
+}
+.btn-post
+{
+    padding: 5px 15px !important;
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    margin-left: 155px;
+}
+.btn-edite
+{
+    position: absolute;
+    top: -40px;
+    right: 80px;
+}
+.btn-dangerr
+{
+    position: absolute;
+    top: -40px;
+    background-color: red !important;
+    color: white !important;
+    font-weight: 500 !important;
+}
+/* respnseve Navbar */
+@media only screen and (max-width: 600px){
+    .navbars
+    {
+        width: 300px !important;
+    }
+    .make-input-center
+    {
+        width: 300px;
+        margin-left: 45px;
+    }
+    .addPost
+{
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    top: 600px;
+    right: 1px ;
+    color: rgb(0, 123, 255);
+}
+.card-body img
+{
+    height: 250px;
+}
+.btn-edite
+{
+    position: absolute;
+    top: -40px;
+    right: 50px;
+    padding: 3px !important;
+    font-size: 14px !important;
+}
+
+.btn-dangerr
+{
+    position: absolute;
+    top: -40px;
+    padding: 3px !important;
+    font-size: 14px !important;
+}
+}
