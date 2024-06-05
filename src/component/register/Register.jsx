@@ -31,11 +31,7 @@ export default function Register() {
             if(data)
             {
                 toast.success("User registered successfully");
-<<<<<<< HEAD
                 navigate("/login");
-=======
-                navigate("login");
->>>>>>> 130f95c85e48285899c758edb4c1edd1a5461f40
                 formik.resetForm();
             }
         } catch (error) {
