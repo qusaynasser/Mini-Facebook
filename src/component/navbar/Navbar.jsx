@@ -5,7 +5,7 @@ import { UserContext } from '../context/User'
 export default function Navbar() {
   const navigate = useNavigate();
   let { userToken, setUserToken, loading, setUserData,userData } = useContext(UserContext);
-// console.log("usetToken in navbar=="+userToken);
+console.log("usetToken in navbar=="+userToken);
 
   const logout = () => {
     localStorage.removeItem('userToken');
