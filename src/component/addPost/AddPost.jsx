@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 
 export default function AddPost() {
     const navigate=useNavigate();
-    const {userToken}=useContext(UserContext);
+    const {userToken,userData,setUserData}=useContext(UserContext);
     const [title,setTitle]=useState("");
     const [body,setBody]=useState("");
     const [image,setImage]=useState([]);
@@ -33,8 +33,11 @@ export default function AddPost() {
             if(data)
             {
                 toast.success("Post is added",{autoClose:false});
-                navigate("/profile");
-                window.location.reload();
+                navigate("/");
+                setUserData({ ...userData, posts_count: userData.posts_count + 1 });
+                setTitle("");
+                setBody("");
+                setImage("");
             }
         }
         catch(err)
@@ -42,9 +45,7 @@ export default function AddPost() {
             console.log(err);
         }
 
-        setTitle("");
-        setBody("");
-        setImage([]);
+        
     }
 
     return (

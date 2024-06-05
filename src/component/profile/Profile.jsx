@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { Modal, Button } from 'react-bootstrap';
 
 export default function Profile() {
-    let {userData,userId,loading,setLoading,userToken}=useContext(UserContext);
+    let {userData,userId,loading,setLoading,userToken,setUserData}=useContext(UserContext);
     console.log(userId);
     const [postUser,setPostUser] = useState([]);
     const [showModal, setShowModal] = useState(false);
@@ -15,7 +15,7 @@ export default function Profile() {
     
     const postsUser=async ()=>{
         const {data}=await axios.get(`https://tarmeezacademy.com/api/v1/users/${userId}/posts`);
-        console.log(data);
+        // console.log(data);
         setPostUser(data.data);
         setLoading(false);
         return data;
@@ -30,10 +30,10 @@ export default function Profile() {
     const deletePost = async (id) => {
         const {data} = await axios.delete(`https://tarmeezacademy.com/api/v1/posts/${id}`,
             {headers: {"Authorization": `Bearer ${userToken}`}});
-        console.log(data);
+        // console.log(data);
         setPostUser(data => data.filter(post => post.id !== id)); // remove deleted post from state
         setShowModal(false);
-        window.location.reload();
+        setUserData({ ...userData, posts_count: userData.posts_count - 1 });
         return data;
     }
 
